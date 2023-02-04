@@ -1,0 +1,29 @@
+{
+  "name": "winsi",
+  "version": "1.0.0",
+  "description": "systeminfo react canvas cors",
+  "main": "index.js",
+  "dependencies": {
+    "systeminformation": "^5.17.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EndyBrownNB/WINSI.git"
+  },
+  "keywords": [
+    "systeminformation",
+    "react",
+    "canvas",
+    "cors"
+  ],
+  "author": "Endy Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EndyBrownNB/WINSI/issues"
+  },
+  "homepage": "https://github.com/EndyBrownNB/WINSI#readme"
+}
