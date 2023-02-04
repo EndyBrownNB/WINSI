@@ -4,13 +4,26 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-function randomNum(max){
-    const num = Math.floor(Math.random()*max)
-    return num
-    //setTimeout(randomNum, 2000, num+100)
+// var a = 0
+// var b = 0
+
+// function ab(){
+//     a = 4
+//     b = 3
+// }
+// ab()
+// console.log(`a:${a} b:${b}`)
+var num = 0
+function randomNum(){
+    //const num = Math.floor(Math.random()*max)
+    num = num+1
+    console.log(num)
+    setTimeout(randomNum, 1000)
 }
 
-randomNum(100)
+//setTimeout(randomNum, 1000)
+randomNum();
+// console.log(num)
 
 const app = express()
 app.use(bodyParser.json())
@@ -19,10 +32,10 @@ const port = 3080
 const host = '192.168.1.83'
 
 app.get('/test', async (req,res) => {
-    const response = await randomNum(100);
-    console.log(response.data)
+    const response = num;
+    console.log(`response: ${response}`)
     res.json({
-        models: response.data.data
+        models: response
     })
 });
 
