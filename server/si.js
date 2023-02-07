@@ -17,7 +17,7 @@ async function findProcces(procName){
         })
 }
 
-setInterval(findProcces, 2000, 'chrome.exe')
+//setInterval(findProcces, 2000, 'chrome.exe')
     
 
 async function order(){
@@ -56,26 +56,21 @@ async function order(){
 //module.exports = order;
 
 
-
-
-
-
-
-
 const processCpuu = si.processes()
     .then(data => {
         res =  {
             cpuu:data.list['178'].cpuu,
         }   
-        return  res
+        return res
     })
 
 function interval (){
-    return processCpuu.then(val => console.log(`Тут: ${val.cpuu}`))
+    return processCpuu.then(val => {return val.cpuu})
 }
 
-module.exports = processCpuu;
+module.exports = interval;
 
+//interval().then(data => console.log(data))
 //setInterval(interval,3000);
 
 
