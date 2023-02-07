@@ -11,6 +11,7 @@
       <div id="message">
         <button id="numbtn"onclick="componentDidMount()">Fetch</button>
         <button id="myButton">Click Me</button>
+        <label id="lbl">no response</label>
       </div>
       <script>
         function componentDidMount(){
@@ -23,6 +24,7 @@
             })
             .then(data => {
               but.innerHTML = `${data.msg}`;
+              lbl.innerHTML = `${data.msg}`;
                 console.log(data.msg);
             })
             .catch(error => {
@@ -31,7 +33,7 @@
           }
           let count = 0;
           const button = document.querySelector("#myButton");
-
+          const lbl = document.querySelector("#lbl");
           setInterval(function() {
             count++;
             button.innerHTML = `Clicked ${count} times`;
