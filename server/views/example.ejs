@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>EJS Example</title>
+    <link  rel="stylesheet" href="/css/example.css">
   </head>
   <body>
     <h1 id="data2">first</h1>
@@ -13,6 +14,12 @@
         <button id="myButton">Click Me</button></br></br>
         <label id="lbl">no response</label>
       </div>
+      <div id="canvas">
+        <canvas id="cnvs" width="500" height="500">
+
+        </canvas>
+      </div>
+      <script src="/js/canvas.js"></script>
       <script>
         function componentDidMount(){
         fetch('http://192.168.1.83:3000/num')
@@ -38,10 +45,10 @@
           setInterval(function() {
             count++;
             button.innerHTML = `Clicked ${count} times`;
-          }, 1000);
+          }, 10000);
 
           var but = document.querySelector("#numbtn");
-          setInterval(function () {but.click();},1000);
+          setInterval(function () {but.click();},10000);
       </script>
 
   </body>

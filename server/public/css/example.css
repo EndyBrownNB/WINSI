@@ -1,0 +1,14 @@
+#canvas{
+    background-color: cornflowerblue;
+    border-style: solid;
+    height: 600px;
+    width: 600px;
+}
+
+#cnvs{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    background-color: rgba(160, 160, 160, 0.342);
+    margin: 50px;
+}

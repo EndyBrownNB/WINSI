@@ -22,19 +22,6 @@ async function findProcces(procName){
 }
 
 
-function interval2 (){
-    let res;
-    return findProcces('Heroes3 HD.exe')
-        .then((data) => {return res = {cpus: cpus,
-            cpu: data.list[i].pcpu,
-            cpuu: data.list[i].pcpuu,
-            pmem: data.list[i].pmem
-        }})
-    return res
-    //{console.log(`_____\nCPUU: ${res.cpuu}\nCPUS: ${res.cpus}\nCPU: ${res.cpu}\nMEM: ${res.pmem}`)})
-}
-
-
 module.exports = findProcces;
 
 
